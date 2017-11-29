@@ -4,6 +4,8 @@ class Appointment
   def initialize(name, doctor)
     @name = name
     @doctor = doctor
+    binding.pry
+
     doctor.appointments << self
   end
 
