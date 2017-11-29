@@ -20,7 +20,7 @@ class Patient
   end
 
   def appointments
-    @doctors.uniq
+    @appointments.uniq
   end
 
 end
