@@ -7,9 +7,9 @@ class Appointment
     doctor.appointments << self
   end
 
-  def genre=(genre)
-    raise AssociationTypeMismatchError, "Genre class is expected" if !genre.is_a?(Genre)
-    @genre = genre unless self.genre == genre
+  def patient=(patient)
+    raise AssociationTypeMismatchError, "Patient class is expected" if !patient.is_a?(Patient)
+    @patient = patient unless self.patient == patient
   end
 
   def artist=(artist)
