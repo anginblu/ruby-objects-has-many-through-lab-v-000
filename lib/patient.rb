@@ -12,12 +12,8 @@ class Patient
     appointment.doctor.patient = self
   end
 
-  def patient=(patient)
-    raise AssociationTypeMismatchError, "Patient class is expected" if !patient.is_a?(Patient)
-    unless self.patient == patient
-      @patient = patient
-      doctor.patients << self.patient
-    end
+  def appointments
+    @appointments
   end
 
   def doctor=(doctor)
