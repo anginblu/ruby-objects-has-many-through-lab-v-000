@@ -19,7 +19,7 @@ class Patient
   end
 
   def doctors
-    @appointments.each {|appointment| @doctors << appointment.doctor}
+    @appointments.each {|appointment| @doctors << appointment.doctor unless @doctors.include?(appointment.doctor)}
     @doctors.uniq
   end
 
