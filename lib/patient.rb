@@ -11,7 +11,7 @@ class Patient
     @appointments << appointment unless self.appointments.include?(appointment)
     appointment.patient = self
     appointment.doctor.patient = self
-    @doctors << appointment.doctor
+    @doctors << appointment.doctor unless self.appointments.include?(appointment)
   end
 
   def doctors
