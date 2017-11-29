@@ -16,8 +16,8 @@ class Appointment
   end
 
   def doctor=(doctor)
-    raise AssociationTypeMismatchError, "Artist class is expected" if !artist.is_a?(Artist)
+    raise AssociationTypeMismatchError, "Artist class is expected" if !doctor.is_a?(Doctor)
     @doctor = doctor unless self.doctor == doctor
   end
-  
+
 end
