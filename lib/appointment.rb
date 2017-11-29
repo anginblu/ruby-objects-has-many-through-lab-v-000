@@ -9,8 +9,8 @@ class Appointment
 
   def patient=(patient)
     raise AssociationTypeMismatchError, "Patient class is expected" if !patient.is_a?(Patient)
-    @patient = patient unless self.patient == patient
-    @doctor = doctor
+    unless self.patient == patient
+    @patient = patient
     genre.doctors << self.doctor
   end
 
