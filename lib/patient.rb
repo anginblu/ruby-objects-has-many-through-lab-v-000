@@ -15,7 +15,7 @@ class Patient
   end
 
   def appointments
-    @appointments.uniq
+    @appointments
   end
 
   def doctors
