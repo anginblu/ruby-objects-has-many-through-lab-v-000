@@ -12,12 +12,12 @@ class Appointment
     unless self.patient == patient
     @patient = patient
     doctor.patients << self.patient
+    end
   end
 
   def doctor=(doctor)
     raise AssociationTypeMismatchError, "Artist class is expected" if !artist.is_a?(Artist)
-    unless self.doctor == doctor
-      @doctor = doctor
+    @doctor = doctor unless self.doctor == doctor
     end
   end
 end
