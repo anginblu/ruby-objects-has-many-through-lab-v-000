@@ -18,7 +18,6 @@ class Appointment
     raise AssociationTypeMismatchError, "Artist class is expected" if !artist.is_a?(Artist)
     unless self.doctor == doctor
       @doctor = doctor
-      genre.doctors << self.doctor
     end
   end
 end
