@@ -20,7 +20,7 @@ class Doctor
   end
 
   def patients
-    @appointments.each {|appointment| @patients << appointment.patient unless @appointments.include?(appointment)}
+    @appointments.each {|appointment| @patients << appointment.patient unless @patients.include?(appointment.patient)}
     @patients
   end
 
