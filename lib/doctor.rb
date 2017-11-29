@@ -16,6 +16,7 @@ class Doctor
   end
 
   def appointments
+    binding.pry
     @appointments.uniq
   end
 
