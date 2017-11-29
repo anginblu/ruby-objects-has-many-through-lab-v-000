@@ -14,17 +14,14 @@ class Patient
     appointment.doctor.patient = self
   end
 
-    def appointments
-      @appointments.uniq
-    end
+  def appointments
+    @appointments.uniq
+  end
     
   def doctors
     @appointments.each {|appointment| @doctors << appointment.doctor}
     @doctors.uniq
   end
 
-  def appointments
-    @appointments.uniq
-  end
 
 end
