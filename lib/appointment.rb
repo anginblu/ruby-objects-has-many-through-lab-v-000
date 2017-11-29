@@ -12,11 +12,11 @@ class Appointment
     @patient = patient unless self.patient == patient
   end
 
-  def artist=(artist)
+  def doctor=(doctor)
     raise AssociationTypeMismatchError, "Artist class is expected" if !artist.is_a?(Artist)
-    unless self.artist == artist
-      @artist = artist
-      genre.artists << self.artist
+    unless self.doctor == doctor
+      @doctor = doctor
+      genre.doctors << self.doctor
     end
   end
 end
