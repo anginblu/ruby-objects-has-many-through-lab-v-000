@@ -19,4 +19,8 @@ class Patient
     @doctors.uniq
   end
 
+  def doctors
+    @doctors.uniq
+  end
+
 end
