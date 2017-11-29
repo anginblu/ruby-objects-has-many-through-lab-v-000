@@ -16,12 +16,12 @@ class Doctor
   end
 
   def appointments
-    @appointments
+    @appointments.uniq
   end
 
   def patients
     @appointments.each {|appointment| @patients << appointment.patient}
-    @patients
+    @patients.uniq
   end
 
 
