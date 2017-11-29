@@ -12,9 +12,12 @@ class Patient
     @appointments << appointment
     appointment.patient = self
     appointment.doctor.patient = self
-    @doctors << appointment.doctor
   end
 
+    def appointments
+      @appointments.uniq
+    end
+    
   def doctors
     @appointments.each {|appointment| @doctors << appointment.doctor}
     @doctors.uniq
