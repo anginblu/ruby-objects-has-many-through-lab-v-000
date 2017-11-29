@@ -3,8 +3,6 @@ class Patient
 
   def initialize(name)
     @name = name
-    @doctor = doctor
-    doctor.appointments << self
   end
 
   def patient=(patient)
