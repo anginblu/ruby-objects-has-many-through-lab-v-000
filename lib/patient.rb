@@ -8,7 +8,7 @@ class Patient
   def add_appointment(appointment)
     raise AssociationTypeMismatchError, "Appointment class is expected" if !appointment.is_a?(Appointment)
     @appointments << appointment unless self.appointments.include?(appointment)
-    appointment.doctor = self
+    appointment.patient = self
     appointment.patient.doctor = self
   end
 
